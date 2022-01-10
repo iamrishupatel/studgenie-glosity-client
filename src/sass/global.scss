@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap");
+
+// colors
+@import "./abstracts/colors";
+
+// utils
+@import "./utils/utils";
+
+// components
+@import "./components/events";
+@import "./components/header";
+@import "./components/loader";
+@import "./components/navigation";
+@import "./components/notices";
+
+// resets & base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+// react-calendar-overide
+.react-calendar__tile--active {
+  background-color: $secondary-color;
+}
+
+// utils
+
+.d-flex {
+  display: flex;
+}
+.icon {
+  font-size: 1.4rem;
+}
+
+// dashboard
+.dashboard {
+  position: relative;
+  main {
+    flex: 1;
+    flex-direction: column;
+    padding: 2rem;
+    margin-left: 6rem;
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.dashboard__notices {
+  display: flex;
+}
+
+.dashboard__calendar {
+  width: 20rem;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.dashboard__events {
+  background-color: $primary-color;
+  border-radius: 0.4rem;
+  padding: 1.4rem;
+  margin-top: 1rem;
+}
+
+.dashboard__events-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    display: flex;
+    align-items: center;
+    color: $secondary-color;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .dashboard__notices {
+    flex-direction: column-reverse;
+  }
+
+  .dashboard__calendar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dashboard {
+    main {
+      padding: 0.6rem;
+      margin-left: 0rem;
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .dashboard__events-header {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dashboard__events-header {
+    h3 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}

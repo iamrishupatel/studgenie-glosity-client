@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  p {
+    font-weight: 500;
+    color: $secondary-color;
+  }
+}
+.avatar {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 100%;
+  margin: 0 1rem;
+}
+
+.hamburger {
+  display: none;
+  margin: 0 0.4rem 0 0.6rem;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,75 @@
+// ========== events ==========
+.slider {
+  margin: 1rem;
+}
+.event-item {
+  border-radius: 0.4rem;
+  height: 14rem;
+  position: relative;
+  margin: 0 0.5rem;
+  display: flex;
+  img {
+    position: absolute;
+    z-index: 0;
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
+
+.event-details-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  width: 100%;
+  padding: 0.4rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.event-date {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 0.1rem 0.6rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: fit-content;
+
+  .day {
+    font-weight: 500;
+  }
+  .month {
+    font-size: 0.7rem;
+  }
+}
+
+.event-dets {
+  width: 100%;
+  color: $primary-color;
+  margin-left: 0.3rem;
+}
+.read-more {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.event-title {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 11rem;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .event-item {
+    margin: 0 0.2rem;
+  }
+}
+
